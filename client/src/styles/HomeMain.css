@@ -1,0 +1,138 @@
+/* General Styles */
+.homeMain {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 92vh;
+    position: relative;
+    background-color: #000;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .homeMain::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(89, 88, 185, 0.1) 0%, transparent 70%);
+    animation: gradientAnimation 10s infinite alternate;
+    z-index: 0;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+  }
+  
+  .homeMainLeft {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    z-index: 1;
+  }
+  
+  .homeMainLeft .child {
+    font-size: 8rem;
+    font-weight: 700;
+    width: 100%;
+    /* text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); */
+  }
+  
+  .homeMainLeft .right {
+    margin-top: -40px;
+    text-align: right;
+  }
+  
+  .homeMainLeft .share {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .homeMainLeft .home-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .homeMainLeft .home-btn button {
+    background: #f1d51a; /* Base color */
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px; /* More rounded corners */
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease; /* Smooth transition for all properties */
+  }
+  
+  .homeMainLeft .home-btn button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease;
+    z-index: 0;
+  }
+  
+  .homeMainLeft .home-btn button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .homeMainLeft .home-btn button:hover {
+    background: #e0c32f; /* Lighter shade on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    color: #000;
+    transform: translateY(-4px); /* Slight lift effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .homeMain {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .homeMainLeft {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .homeMainRight {
+      margin-top: 20px;
+    }
+  
+    .homeMainLeft .child {
+      font-size: 5rem;
+    }
+  
+    .homeMainLeft .right {
+      margin-top: -20px;
+    }
+  
+    .homeMainLeft .share {
+      font-size: 1.2rem;
+    }
+  
+    .homeMainLeft .home-btn button {
+      padding: 10px 20px;
+    }
+  }
+  

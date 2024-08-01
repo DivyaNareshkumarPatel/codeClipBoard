@@ -1,0 +1,22 @@
+.wavy-letter {
+    display: inline-block;
+    transition: transform 0.8s ease-in-out; /* Slower transition */
+  }
+  
+  .wavy-letter.wave {
+    animation: wave-animation 3s ease-in-out infinite; /* Slower animation */
+    transform-style: preserve-3d;
+  }
+  
+  @keyframes wave-animation {
+    0% {
+      transform: rotateX(0deg) translateY(0);
+    }
+    50% {
+      transform: rotateX(25deg) translateY(-25px); /* Increased rotation and translation for stronger 3D effect */
+    }
+    100% {
+      transform: rotateX(0deg) translateY(0);
+    }
+  }
+  
