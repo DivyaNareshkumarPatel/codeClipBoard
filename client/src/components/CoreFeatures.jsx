@@ -33,12 +33,12 @@ const CoreFeatures = () => {
             <WavyText text="Popular Snippets" />
           </Link>
         </li>
-        <li onMouseEnter={() => handleMouseEnter(video2)} onMouseLeave={handleMouseLeave}>
+        <li onMouseEnter={() => handleMouseEnter(video3)} onMouseLeave={handleMouseLeave}>
           <Link className="link-core" to="/learn">
             <WavyText text="Learn" />
           </Link>
         </li>
-        <li onMouseEnter={() => handleMouseEnter(video3)} onMouseLeave={handleMouseLeave}>
+        <li onMouseEnter={() => handleMouseEnter(video2)} onMouseLeave={handleMouseLeave}>
           <Link className="link-core" to="/create">
             <WavyText text="Create" />
           </Link>

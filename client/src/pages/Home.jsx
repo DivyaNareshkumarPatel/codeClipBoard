@@ -10,7 +10,6 @@ export default function Home() {
       style={{
         overflowX:"hidden",
         background: "black",
-        height: "1000vh",
       }}
     >
       <Navbar/>

@@ -1,26 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 .coreFeature {
   position: relative;
-  color: rgb(161, 160, 160);
-  font-size: 4rem;
+  color: gray; /* Light color for better contrast */
+  font-family: 'Roboto', sans-serif;
   height: 100vh;
-  align-items: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  text-align: center;
+  z-index: 1;
 }
 
-.coreFeature .link-core {
-  text-decoration: none;
-  color: rgb(161, 160, 160);
-  font-size: 5rem;
-  font-weight: 500;
-  display: block;
-  margin: 5px 300px;
+.coreFeature ul {
+  padding: 0;
 }
 
 .coreFeature li {
   list-style: none;
-  display: block;
-  margin-top: 55px;
+  margin: 25px 0;
+}
+
+.coreFeature .link-core {
+  text-decoration: none;
+  color: grey; /* Yellow color for emphasis */
+  font-size: 4rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.coreFeature .link-core:hover {
+  transform: translateY(-10px);
+  color: #ffffff; /* White color on hover */
 }
 
 .video-background {
@@ -30,11 +42,13 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 0;
+  filter: blur(8px);
+  opacity: 0.6;
 }
 
 .video-background video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all ;
 }
